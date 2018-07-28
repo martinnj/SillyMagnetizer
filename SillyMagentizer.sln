@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BDEC3042-0FD2-4FF1-A755-B5140C49EFD3}"
 	ProjectSection(SolutionItems) = preProject
 		SillyMagentizer\Magnet.reg = SillyMagentizer\Magnet.reg
+		README.md = README.md
 	EndProjectSection
 EndProject
 Global
