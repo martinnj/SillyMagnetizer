@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.IO.MemoryMappedFiles;
+using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
@@ -27,6 +28,8 @@ namespace SillyMagentizer
         {
             var memorycontent = Shared.ReadMappedFile(_filemutex, assemblyguid);
             textBox1.Text = memorycontent;
+            var counter = memorycontent.Split('\n').Where(o => o.Trim().Length > 0).Count();
+            toolStripStatusLabel1.Text = counter.ToString();
         }
     }
 }
