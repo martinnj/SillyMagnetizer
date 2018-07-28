@@ -26,7 +26,7 @@ namespace SillyMagentizer
                 // Check if we can get the mutex, if we can, we're the first instance so we run.
                 if (singleinstancemutex.WaitOne(TimeSpan.Zero, true))
                 {
-                    MemoryMappedFile mmf = MemoryMappedFile.CreateNew(assemblyguid, 10000, MemoryMappedFileAccess.ReadWrite);
+                    MemoryMappedFile mmf = MemoryMappedFile.CreateNew(assemblyguid, 3*1024*1024, MemoryMappedFileAccess.ReadWrite);
                     memoryaccessmutex.ReleaseMutex();
                     Shared.WriteToMappedFile(memoryaccessmutex, assemblyguid, args[0]);
 
